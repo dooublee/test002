@@ -1,0 +1,263 @@
+:root{
+    --text-color: #191919;
+    --link-color: #415E9A;
+    --background-color: #F5F5DC;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* navbar */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+}
+
+nav .left a{
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a{
+    color: var(--text-color);
+    margin: 0px 10px;
+}
+
+nav .right a:last-child{
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 7px 15px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+nav .right a span{
+    margin-left: 4px;
+}
+
+nav .right a:last-child:hover{
+    color: var(--text-color);
+    background-color: transparent ;
+    border: 2px #191919;
+    box-shadow: inset;
+}
+
+/*section 1*/
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    gap: 40px;
+}
+
+.hero .text h2{
+    font-size: 45px;
+}
+
+.hero .text .links {
+    margin-top: 25px;
+}
+
+.hero .text .links a{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 6px;
+    margin-right: 7px;
+    margin-bottom: 10px;
+    transition: .3s;
+}
+
+.hero .text .links a:hover{
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.hero .text{
+    flex: 5;
+}
+
+.hero .headshot{
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.hero .headshot img{
+    width: 330px;
+    border-radius: 190px;
+}
+
+/*section 2 skills*/
+.skills-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skills-section h2{
+    text-align: center;
+    font-size: 35px;
+}
+
+.skills-section .text{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-section .cells{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid var(--link-color);
+    border-radius: 10px;
+}
+
+.skills-section .cells .cell img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.skills-section .cells .cell span{
+    font-size: 18px;
+}
+
+/*section 3 certificates*/
+
+.certificates-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.certificates-section h2{
+    text-align: center;
+    font-size: 35px;
+}
+
+.certificates-section .crt{
+    display: grid;
+    justify-content: center;
+    padding: 10px 30px;
+}
+
+.certificates-section .crt img{
+    width: 350px;
+    border: 2px solid var(--text-color);
+}
+
+.certificates-section .crt span{
+    text-align: center;
+    padding: 7px 0;
+}
+
+@media (max-width: 850px){
+    .hero .text h2{
+        font-size: 35px;
+
+    }
+}
+
+@media (max-width: 740px){
+    .hero{
+        flex-direction: column-reverse; 
+    }
+    .hero .headshot img{
+        width: 300px;
+    }
+}
+
+@media (max-width: 600px){
+    /*nav*/
+
+    nav{
+        padding: 0 20px;
+    }
+
+    nav .right a{
+        font-size: 22px;
+    }
+
+    nav .right a:last-child{
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+    nav .right a span{
+        display: none;
+    }
+
+    /*section 1 hero*/
+
+    .hero{
+        padding: 0 20px;
+    }
+    .hero .text h2{
+        font-size: 30px;
+    }
+    
+
+    /*section 2 skills*/
+
+    .skills-section{
+        padding: 0 20px;
+    }
+    .skills-section .cells .cell span{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 732px){
+    nav{
+        padding: 0 20px;
+    }
+
+    nav .right a{
+        font-size: 22px;
+    }
+
+    nav .right a:last-child{
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+    nav .right a span{
+        display: none;
+    }
+}
